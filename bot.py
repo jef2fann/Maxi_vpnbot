@@ -5,7 +5,7 @@ import datetime
 import time
 
 # تنظیمات
-API_TOKEN = 'YOUR_BOT_TOKEN_HERE'
+API_TOKEN = '8019578506:AAHohs8-FCawcpOKlh5W0KmZgpmSOALODEQ'
 CHANNEL_USERNAME = 'Maxi_Vpn'
 ADMIN_ID = 627417733
 
@@ -52,8 +52,8 @@ def send_welcome(message):
     if not is_user_subscribed(chat_id):
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("عضو شدم ✅", callback_data="joined"))
-        bot.send_message(chat_id, f"""❌ برای استفاده از ربات باید عضو کانال زیر باشید:
-https://t.me/{CHANNEL_USERNAME}""", reply_markup=markup)
+        bot.send_message(chat_id, f"❌ برای استفاده از ربات باید عضو کانال زیر باشید:\n"
+                                  f"https://t.me/{CHANNEL_USERNAME}", reply_markup=markup)
         return
     bot.send_message(chat_id, "سلام به ربات Maxi_VPN خوش اومدی 🌸")
     show_main_menu(chat_id)
